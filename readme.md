@@ -244,12 +244,13 @@ The following charts were created using Matplotlib:
 
 The analysis focused on extracting the following business insights:
 
-- Identifying the most popular products based on quantity sold.
-- Finding which products contribute the highest recorded revenue.
-- Understanding monthly revenue fluctuations.
-- Identifying the most frequently used payment methods.
-- Comparing sales performance across different locations.
-- Highlighting unusual transaction records that may require further investigation.
+1. **Most Popular Product:** Juice was the most popular item based on total quantity sold, indicating higher customer demand compared to other products.
+
+2. **Revenue Contribution by Product:** Salad generated the highest revenue among all products, making it the top revenue-contributing item.
+
+3. **Monthly Revenue Trend:** June recorded the highest revenue among the analyzed months, indicating a peak in sales during this period.
+
+4. **Product-wise Revenue Comparison:** Juice (3,373), Coffee (3,368), and Cake (3,329) recorded relatively high revenue, while Cookie (3,090) had the lowest revenue among the listed products.
 
 ### Outcome
 
