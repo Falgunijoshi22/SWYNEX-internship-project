@@ -1,4 +1,4 @@
-# Transaction Data Cleaning and Preparation Using Python
+# Cafe sales Data Cleaning and Preparation Using Python
 
 **Internship:** Data Analytics Internship — Task 1  
 **Organization:** SWYNEX Technologies  
@@ -7,7 +7,7 @@
 
 ## 1. Project Overview
 
-This project was completed as part of Task 1 of my Data Analytics Internship at SWYNEX Technologies. The objective was to clean and prepare a transaction dataset using Python so that it could be used reliably for further analysis and visualization.
+This project was completed as part of Task 1 of my Data Analytics Internship at SWYNEX Technologies. The objective was to clean and prepare a cafe sales dataset using Python so that it could be used reliably for further analysis and visualization.
 
 The dataset contains transaction-level information, including product items, quantities, prices, total spending, payment methods, locations, and transaction dates.
 
