@@ -1,43 +1,221 @@
-# Transaction Data Cleaning and Transformation Using Python
+# Transaction Data Cleaning and Preparation Using Python
 
-## Project Overview
+**Internship:** Data Analytics Internship — Task 1  
+**Organization:** SWYNEX Technologies  
+**Project Type:** Data Cleaning and Transformation  
+**Tools:** Python, Pandas, NumPy, Jupyter Notebook
 
-This project focuses on cleaning and transforming transaction data using Python and Pandas. The objective is to improve data quality and prepare the dataset for further analysis and visualization.
+## 1. Project Overview
 
-## Tools and Technologies
+This project was completed as part of Task 1 of my Data Analytics Internship at SWYNEX Technologies. The objective was to clean and prepare a transaction dataset using Python so that it could be used reliably for further analysis and visualization.
 
-- Python
-- Pandas
-- NumPy
-- Jupyter Notebook
+The dataset contains transaction-level information, including product items, quantities, prices, total spending, payment methods, locations, and transaction dates.
 
-## Dataset Description
+The project focuses on identifying data-quality issues, standardizing invalid values, converting data types, validating transaction totals, and creating useful date-based features.
 
-The dataset contains transaction records with information such as transaction ID, product item, quantity, price per unit, total spending, payment method, location, and transaction date.
+## 2. Project Objectives
 
-## Data Cleaning and Transformation
+- Inspect the dataset and understand its structure.
+- Identify missing values and invalid entries.
+- Standardize inconsistent placeholder values.
+- Convert columns to appropriate data types.
+- Validate transaction totals using quantity and price per unit.
+- Extract month and year from transaction dates.
+- Perform final data-quality checks.
+- Export the cleaned dataset for further analysis.
 
-- Inspected dataset structure, column names, and data types.
-- Identified missing values and invalid placeholder entries.
-- Standardized `UNKNOWN` and `ERROR` values as missing values.
-- Converted numeric columns to appropriate data types.
-- Converted transaction dates to datetime format.
-- Validated total spending using quantity and price per unit.
-- Checked for duplicate rows and transaction IDs.
-- Extracted month and year from transaction dates.
-- Performed final data-quality checks.
+## 3. Dataset Description
 
-## Project Outcome
+The dataset contains the following columns:
 
-The project demonstrates a structured approach to data cleaning and transformation, preparing transaction data for future exploratory data analysis, reporting, and visualization.
+| Column | Description |
+|---|---|
+| `Transaction ID` | Unique identifier assigned to a transaction |
+| `Item` | Product associated with the transaction |
+| `Quantity` | Number of units purchased |
+| `Price Per Unit` | Price of one unit of the product |
+| `Total Spent` | Recorded total spending for the transaction |
+| `Payment Method` | Method used to make the payment |
+| `Location` | Transaction or purchase location |
+| `Transaction Date` | Date on which the transaction occurred |
 
-## How to Use
+The dataset contains both numerical and categorical data, along with transaction dates that can support time-based analysis.
+
+## 4. Tools and Technologies
+
+- **Python:** Programming language used for data cleaning.
+- **Pandas:** Used to load, inspect, clean, transform, and export tabular data.
+- **NumPy:** Used to represent missing values and support data preparation.
+- **Jupyter Notebook:** Used to execute Python code and document the workflow.
+
+## 5. Initial Data Quality Findings
+
+During the initial inspection, several data-quality issues were identified.
+
+### Missing Values
+
+The dataset contained missing values (`NaN`) in multiple columns, including:
+
+- Item
+- Quantity
+- Price Per Unit
+- Total Spent
+- Payment Method
+- Location
+- Transaction Date
+
+### Invalid Placeholder Values
+
+The dataset also contained placeholder strings such as `UNKNOWN` and `ERROR`. These values were not valid transaction details and needed to be handled before analysis.
+
+### Data Type Issues
+
+Some numerical fields and transaction dates required conversion to appropriate data types for calculations and date-based operations.
+
+### Transaction Validation
+
+Recorded transaction totals needed to be checked against the expected total calculated from quantity and price per unit.
+
+## 6. Data Cleaning Process
+
+### Step 1: Data Inspection
+
+- Loaded the original CSV dataset using Pandas.
+- Inspected the first rows using `head()`.
+- Checked the number of rows and columns using `shape`.
+- Examined column data types and non-null counts using `info()`.
+- Counted missing values using `isnull().sum()`.
+
+### Step 2: Standardizing Invalid Values
+
+Replaced the exact placeholder strings `UNKNOWN` and `ERROR` with missing values (`NaN`) using Pandas and NumPy.
+
+This made invalid entries easier to identify and handle consistently.
+
+### Step 3: Converting Numeric Columns
+
+Converted the following columns to numeric data types:
+
+- `Quantity`
+- `Price Per Unit`
+- `Total Spent`
+
+Invalid numeric entries were converted to missing values for further investigation.
+
+### Step 4: Date Conversion
+
+Converted `Transaction Date` into a datetime data type using `pd.to_datetime()`.
+
+Invalid date entries were converted to `NaT`, allowing date operations to be performed consistently.
+
+### Step 5: Creating Date-Based Features
+
+Extracted additional information from the transaction date:
+
+- `Month`: Month name associated with the transaction.
+- `Year`: Year associated with the transaction.
+
+These features can be used for monthly and yearly transaction analysis.
+
+### Step 6: Calculating and Validating Transaction Totals
+
+Created a calculated total using:
+
+`Calculated Total = Quantity × Price Per Unit`
+
+Compared the calculated values with the recorded `Total Spent` values to identify missing totals and potential inconsistencies.
+
+Missing totals can be filled from the calculated values when the calculation is valid and the business rule has been confirmed.
+
+### Step 7: Data Quality Validation
+
+Performed checks for:
+
+- Remaining missing values.
+- Duplicate rows.
+- Repeated transaction IDs.
+- Invalid quantities and prices.
+- Differences between recorded and calculated totals.
+- Final column data types.
+
+Potential duplicate records and inconsistent totals should be investigated before any records are removed or overwritten.
+
+## 7. Data Transformation
+
+The following transformations were performed or prepared as part of the workflow:
+
+- Standardization of invalid placeholder values.
+- Conversion of numerical columns into usable numeric formats.
+- Conversion of transaction dates into datetime format.
+- Extraction of month and year features.
+- Calculation of expected transaction totals.
+- Preparation of the cleaned dataset for export.
+
+## 8. Key Findings and Learning Outcomes
+
+### Data Quality Findings
+
+- The original dataset contained missing values across multiple transaction fields.
+- Placeholder values such as `UNKNOWN` and `ERROR` required standardization.
+- Some transaction totals were missing or invalid and could be checked using quantity and unit price.
+- Invalid transaction dates needed to be identified before time-based analysis.
+
+### Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Inspecting real-world tabular data using Pandas.
+- Identifying missing values and inconsistent entries.
+- Converting data types and handling invalid values.
+- Creating date-based features.
+- Validating derived numerical values.
+- Documenting a structured data-cleaning workflow.
+
+**Note:** This project focuses on data cleaning and preparation. Business insights such as highest-selling products, revenue trends, and preferred payment methods require additional exploratory data analysis.
+
+## 9. Repository Structure
+
+```text
+python-transaction-data-cleaning/
+│
+├── README.md
+├── transaction_data_cleaning.ipynb
+├── data/
+│   └── cleaned_transactions.csv
+└── .gitignore
+```
+
+- `README.md` — Project overview, methodology, findings, and instructions.
+- `transaction_data_cleaning.ipynb` — Jupyter Notebook containing the Python workflow, code, and outputs.
+- `data/cleaned_transactions.csv` — Exported cleaned dataset, if included and permitted for redistribution.
+- `.gitignore` — Specifies files and folders that should not be tracked by Git.
+
+The repository structure may vary depending on which files are included.
+
+## 10. How to Run the Project
+
+### Prerequisites
+
+Install Python and Jupyter Notebook, then install the required libraries:
+
+```bash
+pip install pandas numpy jupyter
+```
+
+### Steps
 
 1. Clone or download this repository.
-2. Install the required libraries using `pip install pandas numpy jupyter`.
+2. Place the original dataset in the appropriate project directory if it is not included.
 3. Open `transaction_data_cleaning.ipynb` in Jupyter Notebook.
-4. Update the dataset path if necessary and run the notebook cells.
+4. Update the CSV file path if necessary.
+5. Run the notebook cells sequentially to reproduce the workflow.
 
-## Author
+## 11. Project Outcome
 
-Falguni Joshi 
+The project establishes a structured process for cleaning and transforming transaction data using Python. It prepares the dataset for subsequent exploratory data analysis, reporting, and visualization, subject to review of any remaining data-quality issues.
+
+## 12. Acknowledgment
+
+This project was completed as part of Task 1 of my Data Analytics Internship at **SWYNEX Technologies**.
+
+The project helped strengthen my practical understanding of Python-based data cleaning, transformation, and validation.
