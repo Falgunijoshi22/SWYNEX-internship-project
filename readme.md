@@ -214,6 +214,47 @@ pip install pandas numpy jupyter
 
 The project establishes a structured process for cleaning and transforming transaction data using Python. It prepares the dataset for subsequent exploratory data analysis, reporting, and visualization, subject to review of any remaining data-quality issues.
 
+## Task 2: Exploratory Data Analysis (EDA)
+
+### Objective
+To perform Exploratory Data Analysis on the cleaned café sales dataset to identify sales trends, product performance, customer payment preferences, and location-wise revenue patterns.
+
+### Analysis Performed
+
+The cleaned dataset (`cleaned_cafe_sales.csv`) was used for the following analysis:
+
+- **Product Performance:** Analyzed total quantity sold by each item to identify popular products.
+- **Revenue Analysis:** Compared recorded revenue across different products to identify major revenue contributors.
+- **Monthly Sales Trends:** Examined monthly revenue to understand changes in sales over time.
+- **Payment Method Analysis:** Analyzed transaction counts and revenue by payment method to understand payment preferences.
+- **Location-wise Sales:** Compared revenue across locations to evaluate sales performance.
+- **Anomaly Detection:** Checked for invalid quantities, non-positive prices, and differences between recorded and calculated transaction totals.
+
+### Visualizations
+
+The following charts were created using Matplotlib:
+
+1. Total Quantity Sold by Item
+2. Total Revenue by Item
+3. Monthly Revenue Trend
+4. Transactions by Payment Method
+5. Total Revenue by Location
+
+### Key Business Insights
+
+The analysis focused on extracting the following business insights:
+
+1. **Most Popular Product:** Juice was the most popular item based on total quantity sold, indicating higher customer demand compared to other products.
+
+2. **Revenue Contribution by Product:** Salad generated the highest revenue among all products, making it the top revenue-contributing item.
+
+3. **Monthly Revenue Trend:** June recorded the highest revenue among the analyzed months, indicating a peak in sales during this period.
+
+4. **Product-wise Revenue Comparison:** Juice (3,373), Coffee (3,368), and Cake (3,329) recorded relatively high revenue, while Cookie (3,090) had the lowest revenue among the listed products.
+
+### Outcome
+
+Completed exploratory analysis of the cleaned café sales dataset using Python. Generated visualizations, examined sales patterns, and identified potential business insights to support better understanding of café sales performance.
 ## 12. Acknowledgment
 
 This project was completed as part of Task 1 of my Data Analytics Internship at **SWYNEX Technologies**.
