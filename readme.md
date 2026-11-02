@@ -139,8 +139,7 @@ These slicers allow users to filter the dashboard and explore sales performance 
 
 ### Dashboard Preview
 
-![Café Sales Power BI Dashboard]
-![Project Screenshot]("C:\Users\falgu\OneDrive\Pictures\Screenshots\Screenshot 2026-11-02 131935.png")
+<img width="1310" height="735" alt="Screenshot 2026-11-02 131935" src="https://github.com/user-attachments/assets/4e9f8e65-3b89-49bd-9707-3b0501170e71" />
 
 
 ## 8. Task 4: Final Project Documentation
