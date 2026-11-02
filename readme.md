@@ -139,11 +139,9 @@ These slicers allow users to filter the dashboard and explore sales performance 
 
 ### Dashboard Preview
 
-![Café Sales Power BI Dashboard](dashboard_screenshot.png)
+![Café Sales Power BI Dashboard]
+![Project Screenshot]("C:\Users\falgu\OneDrive\Pictures\Screenshots\Screenshot 2026-11-02 131935.png")
 
-*Note: Keep the screenshot in the same repository folder as the README, or update the image path if you store it elsewhere.*
-
----
 
 ## 8. Task 4: Final Project Documentation
 
@@ -159,9 +157,6 @@ This final stage brings together:
 - Power BI dashboard and its visual representation
 - Key business insights and project conclusion
 
-The README serves as the central documentation for understanding the project, its methodology, analysis, and outcomes.
-
----
 
 ## 9. Conclusion
 
@@ -180,6 +175,5 @@ The project strengthened my understanding of data manipulation, statistical anal
 **Project:** Café Sales Data Analysis and Interactive Dashboard
 
 ## 11. Author
-
-**[Your Name]**  
-GitHub: [Your GitHub Profile](https://github.com/your-username)
+Falguni Joshi
+GitHub: [Your GitHub Profile](https://github.com/Falgunijoshi22)
