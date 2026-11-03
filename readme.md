@@ -17,7 +17,6 @@ The analysis aims to transform raw transaction data into meaningful insights tha
 ## 3. Dataset Information
 
 **Dataset Name:** Café Sales Dataset  
-**Dataset Source:** [Add dataset source/link]
 
 The dataset contains transaction-level information about café sales.
 
